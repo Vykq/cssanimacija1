@@ -1,0 +1,138 @@
+#area {
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  overflow: hidden;
+
+}
+#bg{
+  background: url(images/siluetas.png) repeat-x;
+  width: 100%;
+  height: 480px;
+  top:135px;
+  left: 0px;
+  position: absolute;
+}
+
+#namas{
+  background: url(images/namas.png) no-repeat;
+  width: 100%;
+  background-origin: center left;
+  height: 450px;
+  top:140px;
+  position: absolute;
+}
+
+
+#namas1{
+  background: url(images/namas1.png) no-repeat;
+  width: 100%;
+  height: 100px;
+  top:155px;
+  left: 920px;
+  position: absolute;
+}
+
+#cloud{
+  background: url(images/debesis.png) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top:-20px;
+  bottom: 320px;
+  left: 200px;
+  animation: sky 10s ease-in-out infinite;
+}
+
+#cloudb{
+  background: url(images/debesis.png) no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left:250px;
+  animation: sky 8s linear infinite;
+}
+
+@keyframes sky {
+  0%{transform: translateX(1100px);}
+    100%{transform: translateX(-1000px);}
+
+}
+
+.boom {
+  animation: overlay 2s linear;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  opacity:0;
+}
+
+@keyframes overlay {
+  0%{opacity: 1}
+    90%{opacity: 1}
+      100%(opacity: 0)
+
+}
+
+.voras{
+  background: url(images/voras.png) no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  transform: scaleX(0.5) scaleY(0.5);
+}
+
+#boom {
+  background: url(images/boom.png) no-repeat;
+  width: 253.4px;
+  height: 229px;
+  position: absolute;
+  top:200px;
+  left: 50%;
+  transform: scale(1.5);
+}
+
+#plane {
+  background: url(images/plane.png) no-repeat;
+  width: 100%;
+  height:218px;
+  position: absolute;
+  transform: scale(.3) translateX(-3000px);
+  animation: plane 8s infinite linear;
+}
+
+
+@keyframes plane {
+  0%{transform: translateX(-1000px)  scale(.4);}
+    100%{transform: translateX(1000px) scale(.4);;}
+
+}
+
+#spalva{
+  background: url(images/fonas.png) repeat-x;
+  background-size: contain;
+  width: 100%;
+  transform: scale(2);
+  height: 718px;
+  position: absolute;
+
+}
+
+.txt{
+  width: 100px;
+  position: absolute;
+  height: 100px;
+  background: url(images/ufo-svgrepo-com.svg) no-repeat;
+  background-size: contain;
+  transform-origin: center center;
+
+}
+
+
+#square {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}

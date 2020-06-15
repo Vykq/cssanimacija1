@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Antras Namu darbas</title>
+    <script src="https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.spritely/0.6.8/jquery.spritely.js"></script>
+    <script src="assets/animation.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <div>
+      <div id="area">
+      <div id="spalva"></div>
+        <div id="boom" class="boom"></div>
+        <div id="namas" class="namas"></div>
+        <div id="bg"></div>
+        <div id="plane"></div>
+        <div id="cloud"></div>
+        <div id="cloudb"></div>
+          <div class="voras"></div>
+        <div id="square"><div class="txt"></div></div>
+      </div>
+
+        <script>
+
+          anime({
+            targets: '.namas',
+
+            translateY: [ {
+                value: [0, 0],
+                duration: 1000,
+                delay: 300,
+                  },
+
+                  {
+                    value: 400,
+                    duration: 1000,
+                    delay: 200
+                  } ],
+            rotate: {
+              value: '0.25turn',
+              duration: 10000,
+              delay: 600
+            },
+            opacity: {
+              value: 0,
+              delay:1000
+            }
+          });
+
+
+
+        anime({
+          targets: '.voras',
+
+          translateY: [ {
+              value: [-750, 0],
+              duration: 2000,
+              easing: 'easeInOutExpo'
+                },
+                {
+                  value: [0, 200],
+                  delay: 1000
+                } ],
+          translateX: {
+              value: 1100
+          },
+          rotate: [ {
+              value: '0.5turn',
+              delay: 2000
+          },
+          {
+            value: '0.25turn',
+            duration: 2000,
+            delay:1000
+          },
+          {
+            value: '0.75turn',
+            duration: 2000
+          }],
+  direction: 'alternate',
+          loop: true
+
+
+        });
+    var elem = document.querySelector('#plane'); // kam priskirt animacija kuriam div id
+    var animation = elem.animate({ // animacijos pradzia
+        opacity: [0.3, 1], //kokia animacija bus
+    }, {
+        direction: 'alternate', // cia animacijos ypatybes... greitis blbalba
+        duration: 1000,
+        iterations: Infinity,
+    });
+
+
+</script>
+
+  </body>
+</html>
